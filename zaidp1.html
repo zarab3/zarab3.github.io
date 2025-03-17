@@ -1,0 +1,218 @@
+Skip to main content
+Google Classroom
+Classroom
+Com. Programming T1
+TYS21_4 (Period 8) 2024 1
+Home
+Calendar
+Enrolled
+To-do
+C
+Com. Programming T2
+TYS22_4 (Period 8) 2024 2
+E
+English 11 T2
+EES86_4 (Period 7) 2024 2
+P
+Period 3 -P.E.
+PPS22_8 (Period 3) 2024 2
+F
+Financial Math T1
+MQS21_1 (Period 1) 2024 1
+S
+Student Government
+2024
+C
+Chemistry Period 4
+U
+US Hist T1
+HUS21_1 (Period 5) 2024 1
+G
+Geometry T1
+MGS21_4 (Period 6) 2024 1
+E
+English 11 T1
+EES85_4 (Period 7) 2024 1
+S
+Student Government 2023-2024
+E
+ENL Extra Help
+Year 2024-2025
+C
+Class of 2026
+M
+MSA Club_2024-2025
+U
+U.S. History Prep
+M
+Ms. Rothenberg's Extra Help Center
+0
+M
+Mrs. Chapman's Regents Prep
+Archived classes
+Settings
+Class has been archived by your teacher. You can't add or edit anything.
+Website Back-End (Firebase), Project 1/3
+Website Back-End (Firebase), Project 1/3
+Ashwin Ramanathan
+•
+Dec 2, 2024 (Edited Dec 3, 2024)
+100
+/100
+100 points out of possible 100
+Due Dec 5, 2024, 2:45 PM
+Official start date: Wednesday, 12/4/24
+
+Use the link below.
+
+
+Note: As per the school's new grading policy, this assignment has been be broken into three separate parts with separate submissions. Instead of a late penalty, all three parts will not get a late penalty as long as they are submitted by the due date of the third and final part. After that, they will not be graded any further. If this results in a lower grade than our previous policy, then I will revert to our previous policy. 
+
+Submission instructions for Project 1/3: (see the end of the google doc below for a more detailed overview)
+1) Your html file
+2) A screenshot of your database (including your username) as shown at the end of the google doc below.
+
+Javascript and Firebase (for dash.generalassemb.ly Project 1 )
+Google Docs
+Class comments
+Your work
+Graded
+
+Website Back-End (Firebase), Project 1/3 (Dec 4, 2024 at 2:56 PM).jpg
+Image
+
+zaidp1.html
+HTML
+2 private comments
+
+Zaid Al ZarabDec 4, 2024
+The screen shot button ar not working
+
+Ashwin RamanathanDec 4, 2024
+I remember.
+<!DOCTYPE html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bokor&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Londrina+Shadow&family=Parkinsans:wght@300..800&family=Rubik+Storm&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bokor&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Londrina+Shadow&family=Parkinsans:wght@300..800&family=Rubik+Storm&display=swap" rel="stylesheet">
+  <title>Anna Dowlin</title>
+  <style>
+    body {
+      text-align: center;
+      background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyo4kPjPIxHwfpRwck9He7a7eHuJ3_1Tzhyg&s");
+      background-size: cover;
+      background-position: center;
+      color: green;
+  font-family: "Parkinsans", sans-serif;
+    }
+    p {
+      font-size: 22px;
+    }
+    input {
+      border: 0;
+      padding: 10px;
+      font-size: 18px;
+    }
+    input[type="submit"] {
+      background: yellow;
+      color: purple;
+      font-family: "Parkinsans", sans-serif;
+    }
+    img {
+      border-radius: 300px;
+      
+      }
+  </style>
+</head>
+<body>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXLQx04dy4nCp6kNbhhT57dwoE5cuf9Ue9Hg&s">
+  <p>Hi! I'm Zarab, Z-Shop </p>
+  <input id="Name" placeholder="Your name">
+
+  <input id="Email" type="email" placeholder="Your email">
+  <input id="submit" type="submit">
+	
+	<script type="module">
+	  // Import the functions you need from the SDKs you need
+
+	  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+		import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+	  // TODO: Add SDKs for Firebase products that you want to use
+	  // https://firebase.google.com/docs/web/setup#available-libraries
+
+	  // Your web app's Firebase configuration
+	  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	  const firebaseConfig = {
+	    apiKey: "AIzaSyCZmv8iAGZxzn7v56zv7vFUeTIhVJ_kagg",
+	    authDomain: "zaid-1-e769e.firebaseapp.com",
+	    projectId: "zaid-1-e769e",
+	    storageBucket: "zaid-1-e769e.firebasestorage.app",
+	    messagingSenderId: "697591338917",
+	    appId: "1:697591338917:web:d31645d1ee3b138d537a4c",
+	    measurementId: "G-L1PLLZFTNW"
+	  };
+
+	  // Initialize Firebase
+	  const app = initializeApp(firebaseConfig);
+		const db = getDatabase(app);
+		const Name = document.querySelector("#Name") 
+		const Email = document.querySelector("#Email")
+		document.querySelector('#submit').addEventListener('click', Submit)
+		
+		
+		function Submit() {
+		  const timestamp = buildTimestamp()
+	  
+		  set(ref(db, timestamp), {
+			  Name: Name.value,
+		      email: Email.value,
+		  });
+
+		  Name.value = ""
+		  Email.value = ""
+			function buildTimestamp() {
+			  const now = new Date();
+			  let timestamp = now.getFullYear().toString() + "/";
+			  //const month = now.toLocaleString('default', { month: 'long' });
+
+			  let month = now.getMonth()+1   //add 1 because Javascript uses 0 for January
+			  month = month.toString()
+			  month = addLeadingZero(month)
+			  timestamp += month + "/"; 
+
+			  let date = now.getDate().toString()
+			  date = addLeadingZero(date)
+			  timestamp += date + "/";
+
+			  let hours = now.getHours().toString()
+			  hours = addLeadingZero(hours)
+			  timestamp += hours + ":";
+
+			  let minutes = now.getMinutes().toString()
+			  minutes = addLeadingZero(minutes)
+			  timestamp += minutes + ":";
+
+			  let seconds = now.getSeconds().toString()
+			  seconds = addLeadingZero(seconds)
+			  timestamp += seconds;
+  
+			  return timestamp
+			}
+	
+			function addLeadingZero(units) {
+				if (units.length < 2) {
+					units = "0" + units
+				}
+				return units
+			}
+
+			
+		}
+
+	</script>
+</body>
+zaidp1.html
+Displaying zaidp1.html.

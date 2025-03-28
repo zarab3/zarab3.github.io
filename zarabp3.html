@@ -88,6 +88,8 @@ small {
 .dessert{
   background-image: url("https://atsloanestable.com/wp-content/uploads/2023/06/new-york-style-pizza2-500x500.jpg");
 }
+.drink{
+  background-image: url("https://assets.epicurious.com/photos/61eb09dfb37c8d2963dd7bde/1:1/w_2849,h_2849,c_limit/HotCocoaForOne_RECIPE_012022_086_VOG_final.jpg");
 .price {
   float: right;
 }
@@ -138,7 +140,12 @@ small {
   <small>Lollipop tart cotton candy jelly-o carrot cake apple pie cupcake. Jelly-o bear claw ice cream candy canes.</small></p>
 
 </div>
+<div class="drink">
+	<input class="quantities" type="number" min="0" style="width: 50px">
+  <p>hot chocolate <span class="price">$10</span><br />
+  <small>hot chocolate also known as drinking chocolate or hot cocoa.</small></p>
 
+</div>
 
  <br><br>
   <input id="Name" placeholder="Your name">
@@ -182,7 +189,7 @@ small {
 			document.querySelector('#submit').addEventListener('click', Submit)
 	const quantities = document.querySelectorAll(".quantities")
   const prices = document.querySelectorAll(".price") 
-	const itemsList = ["burger", "ice cream", "pizza"]
+	const itemsList = ["burger", "ice cream", "pizza","hot chocolate"]
 	
 		
 		
